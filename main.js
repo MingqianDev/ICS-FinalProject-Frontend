@@ -1,4 +1,5 @@
-import {getLocation} from './getLocation.js';
+import { getLocation } from './getLocation.js';
 
 // Call getLocation function when the page has finished loading
-window.addEventListener('load', getLocation);
+// window.addEventListener('load', getLocation);
+getLocation();
