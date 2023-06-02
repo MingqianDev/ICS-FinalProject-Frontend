@@ -1,5 +1,5 @@
 const apiKey = 'dee7f9f89cf71e69d03cfc2d23e6dc69';
-
+//test
 export function getWeatherData(latitude, longitude) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
