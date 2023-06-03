@@ -1,5 +1,4 @@
 import { getLocation } from './getLocation.js';
+import './socket/socket.js';
 
-// Call getLocation function when the page has finished loading
-// window.addEventListener('load', getLocation);
 getLocation();

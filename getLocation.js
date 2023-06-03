@@ -1,5 +1,5 @@
-import {getWeatherData} from './getWeatherData.js'
-import {getCity} from './getCity.js';
+import { getGlobal, setGlobal } from '../globals.js';
+
 
 // Get user's location using Geolocation API
 export function getLocation() {
@@ -7,8 +7,10 @@ export function getLocation() {
         navigator.geolocation.getCurrentPosition(position => {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
-            getWeatherData(latitude, longitude);
-            getCity(latitude,longitude)
+            setGlobal('latitude', latitude);
+            setGlobal('longitude', longitude);
+            const socket = getGlobal('socket');
+            socket.emit('locationData', {latitude, longitude})
             console.log(latitude, longitude);
         }, error => {
             console.log('Error getting location:', error);
