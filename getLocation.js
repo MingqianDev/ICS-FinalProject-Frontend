@@ -9,6 +9,7 @@ export function getLocation() {
             const longitude = position.coords.longitude;
             getWeatherData(latitude, longitude);
             getCity(latitude,longitude)
+            console.log(latitude, longitude);
         }, error => {
             console.log('Error getting location:', error);
         });

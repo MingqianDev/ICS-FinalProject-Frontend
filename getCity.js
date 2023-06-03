@@ -8,7 +8,6 @@ export function getCity(latitude, longitude) {
         .then(data => {
             const city = data[0].name;
             document.querySelector('#location').textContent = city;
-            console.log(city);
         })
         .catch(error => {
             console.log('Error fetching city data:', error);
