@@ -17,7 +17,7 @@ socket.on('currentWeatherData', (data) => {
     displayCurrentWeather(data);
 })
 
-// socket.on('weatherForecastData', (data) => {
-//     displayDailyWeather(data);
-//     console.log("success");
-// })
+socket.on('weatherForecastData', (data) => {
+    displayDailyWeather(data);
+    console.log(data);
+})

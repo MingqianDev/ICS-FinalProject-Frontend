@@ -65,45 +65,46 @@ p {
     display: flex; 
     white-space: nowrap;         /* Prevent line breaks */
     overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
-    scroll-behavior: smooth;
-    padding-left: 1000px;
+    /* scroll-behavior: smooth; */
+    color: aliceblue
 }
 
-.forecast-item {
-    min-width: 300px;
-    min-height: 667px;
+.daily-weather-card {
+    min-width: 21vw;
+    min-height: 45vw;
     text-align: center;
     padding: 20px 15px;          /* Padding to create space for content */
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 61px;         
     box-sizing: border-box;      /* Prevents borders and padding from increasing the container width */
-    margin-right: 15px;          /* Set the spacing between forecast-item elements */
+    margin-right: 15px;          /* Set the spacing between daily-weather-card elements */
 }
 
-.forecast-item:last-child {
+.daily-weather-card:last-child {
     margin-right: 0; /* Remove margin-right for the last element */
 }
 
-.forecast-item span { /* weekend */
+.daily-weather-card span { /* weekend */
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.forecast-item h3 { /* temp */
+.daily-weather-card h3 { /* temp */
     display: block;
     margin-bottom: 5px;
 }
 
-.forecast-item img { /* icom */
+.daily-weather-card img { /* icom */
     display: block;
     max-width: 100%; 
     height: auto;
     margin-bottom: 5px;
 }
 
-.forecast-item p { /* description */
+.daily-weather-card p { /* description */
     display: block;
     margin-bottom: 0;
 }

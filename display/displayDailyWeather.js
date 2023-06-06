@@ -1,32 +1,24 @@
+// displayDailyWeather.js
 export function displayDailyWeather(data) {
-    console.log(data);
-    const forecastContainer = document.querySelector("#forecast-container");
-    forecastContainer.innerHTML = ""; // 清空容器
+  const weatherContainer = document.querySelector("#forecast-container");
 
-    data.forEach((day) => {
-        const forecastItem = document.createElement("div");
-        forecastItem.classList.add("forecast-item");
+  data.forEach((day) => {
+    // Create container for each day
+    const dailyWeatherCard = document.createElement("div");
+    dailyWeatherCard.classList.add("daily-weather-card");
 
-        const date = document.createElement("div");
-        date.textContent = day.date.toLocaleDateString("en-US", {
-            weekday: "short",
-            month: "short",
-            day: "numeric",
-        });
-        forecastItem.appendChild(date);
+    // Format date
+    // const formattedDate = day.date.toLocaleDateString();
 
-        const icon = document.createElement("img");
-        icon.src = `http://openweathermap.org/img/wn/${day.icon}.png`;
-        forecastItem.appendChild(icon);
+    // Add content to the dailyWeatherCard
+    dailyWeatherCard.innerHTML = `
+        <span>weekend</span>
+        <h3>${day.tempMax}°/${day.tempMin}°</h3>
+        <img src="/icon/${day.icon}.png" alt="Weather icon">
+        <p>${day.weather}</p>
+      `;
 
-        const temperature = document.createElement("div");
-        temperature.textContent = `${day.temperature}°C`;
-        forecastItem.appendChild(temperature);
-
-        const description = document.createElement("div");
-        description.textContent = day.description;
-        forecastItem.appendChild(description);
-
-        forecastContainer.appendChild(forecastItem);
-    });
+    // Append dailyWeatherCard to the weather-container in the HTML file
+    weatherContainer.appendChild(dailyWeatherCard);
+  });
 }

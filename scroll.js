@@ -1,12 +1,7 @@
-const container = document.getElementById('forecast-container');
-const items = document.querySelectorAll(".forecast-item");
+const container = document.querySelector('#forecast-container');
+const items = document.querySelectorAll(".daily-weather-card");
 
-for (const item of items) {
-  item.addEventListener('mouseenter', () => {
-    container.style.overflowX = 'scroll';
-  });
-  item.addEventListener('mouseleave', () => {
-    container.style.overflowX = 'hidden';
-  });
-}
-container.scrollLeft = 150;
+container.addEventListener('wheel', (e) => {
+    e.preventDefault(); // Prevent the default vertical scrolling behavior
+    container.scrollLeft += e.deltaY; // Change the horizontal scroll position based on the direction of the mouse wheel
+})
