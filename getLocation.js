@@ -11,11 +11,12 @@ export function getLocation() {
             setGlobal('longitude', longitude);
             const socket = getGlobal('socket');
             socket.emit('locationData', {latitude, longitude})
+            socket.emit('getWeatherData');
             console.log(latitude, longitude);
         }, error => {
             console.log('Error getting location:', error);
         });
     } else {
-        console.log('Geolocation is not supported by this browser.');
+        alert('Geolocation is not supported by this browser.');
     }
 }
