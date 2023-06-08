@@ -1,8 +1,9 @@
 // displayDailyWeather.js
 export function displayDailyWeather(data) {
   const weatherContainer = document.querySelector("#forecast-container");
+  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
-  data.forEach((day) => {
+  data.dailyWeather.forEach((day) => {
     // Create container for each day
     const dailyWeatherCard = document.createElement("div");
     dailyWeatherCard.classList.add("daily-weather-card");
@@ -12,7 +13,7 @@ export function displayDailyWeather(data) {
 
     // Add content to the dailyWeatherCard
     dailyWeatherCard.innerHTML = `
-        <span>weekend</span>
+        <span>${weekdays[day.date]}</span>
         <h3>${day.tempMax}°/${day.tempMin}°</h3>
         <img src="/icon/${day.icon}.png" alt="Weather icon">
         <p>${day.weather}</p>
