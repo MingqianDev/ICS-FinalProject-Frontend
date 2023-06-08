@@ -18,6 +18,5 @@ export async function getData() {
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
-        throw error;
     }
 }
