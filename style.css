@@ -6,7 +6,7 @@
 
 body {
     font-family: "Helvetica Light", sans-serif;
-    background-image: linear-gradient(#00397b, #0065c1);
+    background-image: linear-gradient(#00397b, #2272bd);
     text-align: center;
 }
 
@@ -16,7 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     color: aliceblue;
-    height: 90vh;
+    height: 95vh;
     /* margin:  auto;
     padding: 20px;
     background-color: #fff;
@@ -25,18 +25,21 @@ body {
 }
 
 #temperature {
-    font-size: 20em;
+    /* font-size: 20em; */
+    font-size: 15vw;
     margin-top: 0px;
     margin-bottom: 30px;
 
 }
 
-h2 {
-    font-size: 2em;
+#location {
+    /* font-size: 2em; */
+    font-size: 2vw;
 }
 
-p {
-    font-size: 2.75em;
+#slide {
+    /* font-size: 2.75em; */
+    font-size: 3.5vw;
     margin-bottom: 10px;
 }
 
@@ -48,22 +51,28 @@ p {
 }
 
 #weather-icon {
-    width: 256px;
-    height: 256px;
+    /* width: 256px;
+    height: 256px; */
+    width: 13vw;
+    height: 13vw;
     object-fit: contain;
     margin-right: 50px;
+    margin-right: 10vw;
 }
 
 #weather {
     margin-right: 20px;
+    margin-bottom: 3vh;
     font-size: 52px;
+    font-size: 5vw;
 }
 
 /* --- */
 
 #forecast-container {
-    display: flex; 
-    white-space: nowrap;         /* Prevent line breaks */
+    display: flex;
+    white-space: nowrap;
+    /* Prevent line breaks */
     overflow-x: auto;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -75,36 +84,45 @@ p {
     min-width: 21vw;
     min-height: 45vw;
     text-align: center;
-    padding: 20px 15px;          /* Padding to create space for content */
+    padding: 20px 15px;
+    /* Padding to create space for content */
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 61px;         
-    box-sizing: border-box;      /* Prevents borders and padding from increasing the container width */
-    margin-right: 15px;          /* Set the spacing between daily-weather-card elements */
+    border-radius: 61px;
+    box-sizing: border-box;
+    /* Prevents borders and padding from increasing the container width */
+    margin-right: 15px;
+    /* Set the spacing between daily-weather-card elements */
 }
 
 .daily-weather-card:last-child {
-    margin-right: 0; /* Remove margin-right for the last element */
+    margin-right: 0;
+    /* Remove margin-right for the last element */
 }
 
-.daily-weather-card span { /* weekend */
+.daily-weather-card span {
+    /* weekend */
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.daily-weather-card h3 { /* temp */
+.daily-weather-card h3 {
+    /* temp */
+    font-size: 4.5vw;
     display: block;
     margin-bottom: 5px;
 }
 
-.daily-weather-card img { /* icom */
+.daily-weather-card img {
+    /* icom */
     display: block;
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     margin-bottom: 5px;
 }
 
-.daily-weather-card p { /* description */
+.daily-weather-card p {
+    /* description */
     display: block;
     margin-bottom: 0;
 }

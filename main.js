@@ -1,4 +1,7 @@
-import { getLocation } from './getLocation.js';
-import './socket/socket.js';
+import { displayCurrentWeather } from './display/displayCurrentWeather.js';
+import { displayDailyWeather } from './display/displayDailyWeather.js';
+import { getData } from './getData.js';
 
-getLocation();
+const data = getData();
+displayCurrentWeather(data);
+displayDailyWeather(data);
