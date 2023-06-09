@@ -2,6 +2,7 @@ import { displayCurrentWeather } from './display/displayCurrentWeather.js';
 import { displayDailyWeather } from './display/displayDailyWeather.js';
 import { getData } from './getData.js';
 
+
 async function main() {
     try {
         const data = await getData();
@@ -15,3 +16,4 @@ async function main() {
 }
 
 main()
+
