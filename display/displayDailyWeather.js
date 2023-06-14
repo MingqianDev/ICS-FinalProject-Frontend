@@ -3,7 +3,7 @@ export function displayDailyWeather(data) {
   const weatherContainer = document.querySelector("#forecast-container");
   const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
-  data.dailyWeather.forEach((day, index) => {
+  data.weatherData.forecastData.forEach((day, index) => {
     // Create container for each day
     const dailyWeatherCard = document.createElement("a");
     dailyWeatherCard.classList.add("daily-weather-card");

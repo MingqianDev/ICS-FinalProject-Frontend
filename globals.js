@@ -8,6 +8,7 @@ const globals = {
 export function setGlobal(name, value) {
     // console.log(`Setting global variable '${name}' to '${value}'`);
     globals[name] = value;
+    localStorage.setItem(name, JSON.stringify(value));
 }
 
 // Define a function to get a global variable

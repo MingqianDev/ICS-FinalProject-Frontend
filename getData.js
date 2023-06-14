@@ -13,7 +13,7 @@ export async function getData() {
             body: JSON.stringify(location)
         });
         const data = await response.json();
-        setGlobal('weatherData', data);
+        setGlobal('weatherData', data)
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
