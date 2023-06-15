@@ -1,5 +1,6 @@
 import { displayCurrentWeather } from './display/displayCurrentWeather.js';
 import { displayDailyWeather } from './display/displayDailyWeather.js';
+import { displayHourlyWeather } from './display/displayHourlyWeather.js';
 import { getData } from './getData.js';
 
 async function main() {
@@ -7,6 +8,7 @@ async function main() {
         const data = await getData();
         console.log(data);
         displayCurrentWeather(data);
+        displayHourlyWeather(data);
         displayDailyWeather(data);
         document.querySelector('#city').innerHTML = data.city
     } catch (error) {
@@ -14,4 +16,4 @@ async function main() {
     }
 }
 
- main()
+main()

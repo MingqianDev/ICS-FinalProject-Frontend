@@ -1,5 +1,6 @@
 const container = document.querySelector('#forecast-container');
 const items = document.querySelectorAll(".daily-weather-card");
+const hourlyContainer= document.querySelector('#hourly-data');
 /*
 let touchStartX;
 let touchStartY;
@@ -34,4 +35,9 @@ container.addEventListener('touchmove', (e) => {
 container.addEventListener('wheel', (e) => {
     e.preventDefault(); // Prevent the default vertical scrolling behavior
     container.scrollLeft += e.deltaY; // Change the horizontal scroll position based on the direction of the mouse wheel
+});
+
+hourlyContainer.addEventListener('wheel', (e) => {
+    e.preventDefault(); // Prevent the default vertical scrolling behavior
+    hourlyContainer.scrollLeft += e.deltaY; // Change the horizontal scroll position based on the direction of the mouse wheel
 });
