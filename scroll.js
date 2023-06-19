@@ -1,12 +1,12 @@
 const container = document.querySelector('#forecast-container');
 const items = document.querySelectorAll(".daily-weather-card");
 const hourlyContainer= document.querySelector('#hourly-data');
-/*
+
 let touchStartX;
 let touchStartY;
 
 // Listen for the 'touchstart' event on the container element
-container.addEventListener('touchstart', (e) => {
+hourlyContainer.addEventListener('touchstart', (e) => {
     // Store the initial touch position coordinates
     touchStartX = e.changedTouches[0].clientX;
     touchStartY = e.changedTouches[0].clientY;
@@ -14,7 +14,7 @@ container.addEventListener('touchstart', (e) => {
 });
 
 // Listen for the 'touchmove' event on the container element
-container.addEventListener('touchmove', (e) => {
+hourlyContainer.addEventListener('touchmove', (e) => {
     e.preventDefault(); // Prevent default touch behavior
     const touchCurrentX = e.changedTouches[0].clientX;
     const touchCurrentY = e.changedTouches[0].clientY;
@@ -23,14 +23,14 @@ container.addEventListener('touchmove', (e) => {
 
     // When the horizontal scroll distance is greater than the vertical scroll distance, consider it as a left or right swipe
     if (Math.abs(touchDeltaX) > Math.abs(touchDeltaY)) {
-        container.scrollLeft += touchDeltaX;
+        hourlyContainer.scrollLeft += touchDeltaX;
     }
 
     // Update the touch start coordinates for the next touch move event
     touchStartX = touchCurrentX;
     touchStartY = touchCurrentY;
 });
-*/
+
 // Listen for the 'wheel' event on the container element
 container.addEventListener('wheel', (e) => {
     e.preventDefault(); // Prevent the default vertical scrolling behavior
