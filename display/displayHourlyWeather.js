@@ -28,7 +28,7 @@ export function displayHourlyWeather(data) {
       hourlyDataCard.innerHTML = `
         <span>${hour.hour}:00</span>
         <img src="/icon/${hour.icon}.png" alt="Weather icon for hour" />
-        <h3>${hour.temp}°</h3>
+        <h3>${hour.temp}&deg</h3>
         <span>${(hour.pop * 100).toFixed(0)}% <img src="../icon/${pop}.png" alt="pop"></span>
       `;
       let test;

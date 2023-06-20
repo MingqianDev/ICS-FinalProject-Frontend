@@ -22,7 +22,9 @@ if (page == 0) {
     const container = createAndAppend('div', body, 'container', 'today');
     const weatherInfo = createAndAppend('div', container, 'weather-info', 'today');
     const todayPage = createAndAppend('span', weatherInfo, null, 'today');
-    todayPage.innerText = 'TodayPage';
+    const MaxMin = createAndAppend('span', weatherInfo, null, 'today');
+    todayPage.innerText = 'TODAY: ';
+    MaxMin.innerHTML = `↑${weatherData.weatherData.forecastData[page].tempMax}&deg;C ↓${weatherData.weatherData.forecastData[page].tempMin}&deg;C`
     console.log('today page');
 
 } else {

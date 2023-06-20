@@ -23,8 +23,21 @@ body {
 }
 
 #weather-info {
+    display: flex;
+    justify-content: space-between;
     width: 70vw;
     height: 40vw;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 61px;
+    border-radius: 6vw;
+}
+
+.today div {
+    padding: 2.5vw 5vh;
+}
+
+.today span {
+    justify-content: flex-start; 
+    text-align: start;
+    font-size: 5vw;
+    color: white;
 }
