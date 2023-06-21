@@ -5,9 +5,9 @@ export function displayDailyWeather(data) {
 
   data.weatherData.forecastData.forEach((day, index) => {
     // Create container for each day
-    const dailyWeatherCard = document.createElement("a");
+    const dailyWeatherCard = document.createElement("div");
     dailyWeatherCard.classList.add("daily-weather-card");
-    dailyWeatherCard.href = `detail.html?date=${day.date}&page=${index}`;
+    // dailyWeatherCard.href = `detail.html?date=${day.date}&page=${index}`;
     
     // Add content to the dailyWeatherCard
     dailyWeatherCard.innerHTML = `

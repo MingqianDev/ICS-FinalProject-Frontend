@@ -1,6 +1,7 @@
 import { getLocation } from "./getLocation.js";
 import { setGlobal } from "./globals.js";
 
+//Fetch weather data from the server.
 export async function getData() {
     try {
         const location = await getLocation();

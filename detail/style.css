@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
     font-family: 'Helvetica Light';
     src: url('/fonts/Helvetica Light Regular.otf') format('opentype');
     font-style: normal;
-}
+} */
 
 html,
 body {
@@ -10,7 +10,7 @@ body {
     height: 100%;
     margin: 0px;
     text-align: center;
-    font-family: "Helvetica Light", sans-serif;
+    /* font-family: "Helvetica Light", sans-serif; */
     background-image: linear-gradient(#1497fc, #fdfeff);
     overflow: hidden;
 }
@@ -25,6 +25,7 @@ body {
 #weather-info {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     width: 70vw;
     height: 40vw;
     background-color: rgba(0, 0, 0, 0.3);
@@ -33,11 +34,21 @@ body {
 
 .today div {
     padding: 2.5vw 5vh;
+    color: white;
+    font-size: 5vw;
 }
 
-.today span {
+#tempRange {
     justify-content: flex-start; 
     text-align: start;
-    font-size: 5vw;
-    color: white;
+
+
+}
+
+#sunrise{
+    display: block;
+}
+
+#sunset{
+    display: block;
 }

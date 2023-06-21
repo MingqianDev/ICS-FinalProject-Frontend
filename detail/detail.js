@@ -21,10 +21,14 @@ if (page == 0) {
 
     const container = createAndAppend('div', body, 'container', 'today');
     const weatherInfo = createAndAppend('div', container, 'weather-info', 'today');
-    const todayPage = createAndAppend('span', weatherInfo, null, 'today');
-    const MaxMin = createAndAppend('span', weatherInfo, null, 'today');
-    todayPage.innerText = 'TODAY: ';
-    MaxMin.innerHTML = `↑${weatherData.weatherData.forecastData[page].tempMax}&deg;C ↓${weatherData.weatherData.forecastData[page].tempMin}&deg;C`
+    const tempRange = createAndAppend('span', weatherInfo, "tempRange", 'today');
+    const sunrise = createAndAppend('span', weatherInfo, "sunrise", "today");
+    const sunset = createAndAppend('span', weatherInfo, "sunset", "today");
+
+
+    tempRange.innerHTML = `↑${weatherData.weatherData.forecastData[page].tempMax}&deg;C ↓${weatherData.weatherData.forecastData[page].tempMin}&deg;C`
+    sunrise.innerText = "sunrise:"
+    sunset.innerText = "sunset:"
     console.log('today page');
 
 } else {
